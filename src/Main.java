@@ -1,5 +1,28 @@
+
+import javax.swing.JFrame;
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(600,600);
+        frame.setVisible(true);
+
+        GamePanel gamePanel = new GamePanel();
+        frame.add(gamePanel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+
+        gamePanel.startGameThread();
+
+        Movement.startUpdatingMouseLocation();
+
+        Point mouseLocation = Movement.getMouseLocation();
+        System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
+
+
     }
+
 }
