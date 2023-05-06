@@ -4,11 +4,13 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 public class GamePanel extends JPanel implements Runnable{
-
-    //screen settings
-    final int screenWidth = 600;
-    final int screenHeight = 600;
     Thread gameThread;
+    double xSpeed = 0;
+    double ySpeed = 0;
+    int x = 300;
+    int y = 300;
+
+    double velocity = 0.1;
 
     private Point mouseLocation = new Point();
 
@@ -26,6 +28,10 @@ public class GamePanel extends JPanel implements Runnable{
         });
     }
 
+    public Point getMouseLocation() {
+        return mouseLocation;
+    }
+
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
@@ -38,7 +44,7 @@ public class GamePanel extends JPanel implements Runnable{
 
             update();
             repaint();
-            Point mouseLocation = getMouseLocation();
+            //Point mouseLocation = getMouseLocation();
             System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
             try {
                 Thread.sleep(16); // Wait for 1/60th of a second
@@ -52,15 +58,20 @@ public class GamePanel extends JPanel implements Runnable{
 
     }
 public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        Graphics2D g2 = (Graphics2D)g;
 
-        g2.setColor(Color.red);
-        Point mouseLocation = getMouseLocation();
-        g2.fillOval(mouseLocation.x, mouseLocation.y, 40, 40);
-        g2.dispose();
-}
-    public Point getMouseLocation() {
-        return mouseLocation;
+    x = (int) (x + xSpeed);
+    y = (int) (y + ySpeed);
+
+    xSpeed = (mouseLocation.x - x) * velocity;
+    ySpeed = (mouseLocation.y - y) * velocity;
+
+
+    super.paintComponent(g);
+    Graphics2D g2 = (Graphics2D) g;
+
+    g2.setColor(Color.red);
+    Point mouseLocation = getMouseLocation();
+    g2.fillOval(x - 20, y - 20, 40, 40);
+    g2.dispose();
     }
 }

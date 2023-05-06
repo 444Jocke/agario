@@ -17,11 +17,6 @@ public class Main {
 
         gamePanel.startGameThread();
 
-        Movement.startUpdatingMouseLocation();
-
-        Point mouseLocation = Movement.getMouseLocation();
-        System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
-
 
     }
 
