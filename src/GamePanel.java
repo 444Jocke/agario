@@ -45,6 +45,7 @@ public class GamePanel extends JPanel implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
     }
     public void update(){
@@ -52,6 +53,12 @@ public class GamePanel extends JPanel implements Runnable{
     }
 public void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D)g;
+
+        g2.setColor(Color.red);
+        Point mouseLocation = getMouseLocation();
+        g2.fillOval(mouseLocation.x, mouseLocation.y, 40, 40);
+        g2.dispose();
 }
     public Point getMouseLocation() {
         return mouseLocation;
