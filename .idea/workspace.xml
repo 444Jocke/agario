@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="Tog bort onödiga methods">
-      <change afterPath="$PROJECT_DIR$/src/Balls.java" afterDir="false" />
+    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="Flytta player till class balls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Balls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683375829869</updated>
       <workItem from="1683375831305" duration="15449000" />
-      <workItem from="1683461338458" duration="2155000" />
+      <workItem from="1683461338458" duration="9581000" />
     </task>
     <task id="LOCAL-00001" summary="agario">
       <created>1683384003777</created>
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683461642655</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Flytta player till class balls">
+      <created>1683467123176</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683467123176</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +104,7 @@
     <MESSAGE value="agario" />
     <MESSAGE value="implemented oval and made it follow mouse pointer" />
     <MESSAGE value="Tog bort onödiga methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tog bort onödiga methods" />
+    <MESSAGE value="Flytta player till class balls" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flytta player till class balls" />
   </component>
 </project>

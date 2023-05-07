@@ -5,13 +5,6 @@ import java.awt.event.MouseMotionAdapter;
 
 public class GamePanel extends JPanel implements Runnable{
     Thread gameThread;
-    double xSpeed = 0;
-    double ySpeed = 0;
-    int x = 300;
-    int y = 300;
-
-    double velocity = 0.1;
-
     public static Point mouseLocation = new Point();
 
     public GamePanel(){
@@ -37,7 +30,7 @@ public class GamePanel extends JPanel implements Runnable{
 
         while(gameThread != null) {
 
-            update();
+            //update();
             repaint();
             System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
             try {
@@ -51,21 +44,18 @@ public class GamePanel extends JPanel implements Runnable{
 
     public void paintComponent(Graphics g) {
 
-        x = (int) (x + xSpeed);
-        y = (int) (y + ySpeed);
-
-        xSpeed = (mouseLocation.x - x) * velocity;
-        ySpeed = (mouseLocation.y - y) * velocity;
-
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        Balls.Player(g2);
 
-        Balls.draw(g2);
+        Balls.Food(g2);
+
+
+
+
 
 
         g2.dispose();
     }
-    public void update(){
-
-    }
+    ////}
 }
