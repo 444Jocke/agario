@@ -9,10 +9,11 @@ public class GamePanel extends JPanel implements Runnable{
 
     public GamePanel(){
 
+        //setting panel properties
         this.setPreferredSize(new Dimension(600, 600));
         this.setBackground(Color.WHITE);
-        this.setDoubleBuffered(true);
 
+        //gives the mlocation of the mouse to the mouseLocation
         this.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {
@@ -20,43 +21,28 @@ public class GamePanel extends JPanel implements Runnable{
             }
         });
     }
+    //starts the game thread and updates the graphics
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
     }
-
     @Override
     public void run() {
 
         while(gameThread != null) {
-
-            //update();
             repaint();
-            System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
-            try {
-                Thread.sleep(16); // Wait for 1/60th of a second
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
         }
     }
-
+    //creates the graphics on screen
     public void paintComponent(Graphics g) {
-
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        Text.drawText(g2);
         Balls.Player(g2);
-
         Balls.Food(g2);
-
-
-
-
-
-
-        g2.dispose();
     }
+
+
 
 
 }
