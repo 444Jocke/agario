@@ -27,11 +27,6 @@ public class GamePanel extends JPanel implements Runnable{
             }
         });
     }
-
-    public Point getMouseLocation() {
-        return mouseLocation;
-    }
-
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
@@ -44,7 +39,6 @@ public class GamePanel extends JPanel implements Runnable{
 
             update();
             repaint();
-            //Point mouseLocation = getMouseLocation();
             System.out.println("Mouse location: " + mouseLocation.x + ", " + mouseLocation.y);
             try {
                 Thread.sleep(16); // Wait for 1/60th of a second
@@ -70,7 +64,6 @@ public void paintComponent(Graphics g) {
     Graphics2D g2 = (Graphics2D) g;
 
     g2.setColor(Color.red);
-    Point mouseLocation = getMouseLocation();
     g2.fillOval(x - 20, y - 20, 40, 40);
     g2.dispose();
     }
