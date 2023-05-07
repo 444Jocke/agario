@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="Flytta player till class balls">
+    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="gaga">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Balls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
@@ -46,7 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683375829869</updated>
       <workItem from="1683375831305" duration="15449000" />
-      <workItem from="1683461338458" duration="9581000" />
+      <workItem from="1683461338458" duration="11478000" />
     </task>
     <task id="LOCAL-00001" summary="agario">
       <created>1683384003777</created>
@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683467123176</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="gaga">
+      <created>1683478428399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1683478428399</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +112,7 @@
     <MESSAGE value="implemented oval and made it follow mouse pointer" />
     <MESSAGE value="Tog bort onödiga methods" />
     <MESSAGE value="Flytta player till class balls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flytta player till class balls" />
+    <MESSAGE value="gaga" />
+    <option name="LAST_COMMIT_MESSAGE" value="gaga" />
   </component>
 </project>

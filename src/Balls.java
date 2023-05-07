@@ -10,7 +10,19 @@ public class Balls extends GamePanel{
     static int y = 300;
     static double velocity = 0.1;
 
+    // Add this field to hold the positions of the food items
+    private static Point[] foodPositions;
 
+    static {
+        // Generate random positions for the food items
+        Random rand = new Random();
+        foodPositions = new Point[40];
+        for (int i = 0; i < foodPositions.length; i++) {
+            int randomX = rand.nextInt(599);
+            int randomY = rand.nextInt(599);
+            foodPositions[i] = new Point(randomX, randomY);
+        }
+    }
 
     public static void Player(Graphics2D g2) {
 
@@ -26,16 +38,11 @@ public class Balls extends GamePanel{
     }
 
     public static void Food(Graphics2D g2) {
-        Random rand = new Random();
-        for (int i = 0; i < 10; i++) {
-            int randomX = rand.nextInt(599);
-            int randomY= rand.nextInt(599);
-            g2.setColor(Color.green);
-            g2.fillOval(randomX, randomY, 10, 10);
+        // Draw the food items using the fixed positions generated earlier
+        g2.setColor(Color.green);
+        for (Point pos : foodPositions) {
+            g2.fillOval(pos.x, pos.y, 10, 10);
         }
     }
 
 }
-
-
-
