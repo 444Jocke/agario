@@ -12,7 +12,7 @@ public class GamePanel extends JPanel implements Runnable{
 
     double velocity = 0.1;
 
-    private Point mouseLocation = new Point();
+    public static Point mouseLocation = new Point();
 
     public GamePanel(){
 
@@ -48,23 +48,24 @@ public class GamePanel extends JPanel implements Runnable{
 
         }
     }
+
+    public void paintComponent(Graphics g) {
+
+        x = (int) (x + xSpeed);
+        y = (int) (y + ySpeed);
+
+        xSpeed = (mouseLocation.x - x) * velocity;
+        ySpeed = (mouseLocation.y - y) * velocity;
+
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+
+        Balls.draw(g2);
+
+
+        g2.dispose();
+    }
     public void update(){
 
-    }
-public void paintComponent(Graphics g) {
-
-    x = (int) (x + xSpeed);
-    y = (int) (y + ySpeed);
-
-    xSpeed = (mouseLocation.x - x) * velocity;
-    ySpeed = (mouseLocation.y - y) * velocity;
-
-
-    super.paintComponent(g);
-    Graphics2D g2 = (Graphics2D) g;
-
-    g2.setColor(Color.red);
-    g2.fillOval(x - 20, y - 20, 40, 40);
-    g2.dispose();
     }
 }
