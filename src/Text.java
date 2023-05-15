@@ -12,3 +12,5 @@ public class Text extends GamePanel {
         g2.drawString(text, textX, textY);
     }
 }
+
+

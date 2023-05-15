@@ -15,7 +15,7 @@ public class Main {
         GamePanel gamePanel = new GamePanel();
         frame.add(gamePanel);
         frame.pack();
-        //the window wull be in the centre of the screen
+        //the window will be in the centre of the screen
         frame.setLocationRelativeTo(null);
 
         gamePanel.startGameThread();

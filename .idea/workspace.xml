@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="skapat food som spawnar i random platser">
-      <change afterPath="$PROJECT_DIR$/src/Text.java" afterDir="false" />
+    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="när spelaren nudder en food så försvinner den och la till text">
+      <change afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Balls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Balls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,10 @@
       <option name="presentableId" value="Default" />
       <updated>1683375829869</updated>
       <workItem from="1683375831305" duration="15449000" />
-      <workItem from="1683461338458" duration="19650000" />
+      <workItem from="1683461338458" duration="21904000" />
+      <workItem from="1684004382472" duration="1161000" />
+      <workItem from="1684008480458" duration="1477000" />
+      <workItem from="1684181967051" duration="1281000" />
     </task>
     <task id="LOCAL-00001" summary="agario">
       <created>1683384003777</created>
@@ -99,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683480865194</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="när spelaren nudder en food så försvinner den och la till text">
+      <created>1683495843177</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683495843177</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +134,7 @@
     <MESSAGE value="Flytta player till class balls" />
     <MESSAGE value="gaga" />
     <MESSAGE value="skapat food som spawnar i random platser" />
-    <option name="LAST_COMMIT_MESSAGE" value="skapat food som spawnar i random platser" />
+    <MESSAGE value="när spelaren nudder en food så försvinner den och la till text" />
+    <option name="LAST_COMMIT_MESSAGE" value="när spelaren nudder en food så försvinner den och la till text" />
   </component>
 </project>
