@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Player extends GamePanel{
+public class Player{
     static double xSpeed = 0;
     static double ySpeed = 0;
     static int x = 300;
@@ -14,8 +14,8 @@ public class Player extends GamePanel{
         x = (int) (x + xSpeed);
         y = (int) (y + ySpeed);
 
-        xSpeed = (mouseLocation.x - x) * velocity;
-        ySpeed = (mouseLocation.y - y) * velocity;
+        xSpeed = (GamePanel.mouseLocation.x - x) * velocity;
+        ySpeed = (GamePanel.mouseLocation.y - y) * velocity;
 
         g2.setColor(Color.red);
         g2.fillOval(x - 20, y - 20, playerSize, playerSize);

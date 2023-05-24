@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.util.Random;
 
-public class Food extends GamePanel{
+public class Food{
 
 
     private static final Point[] foods;
@@ -36,6 +36,7 @@ public class Food extends GamePanel{
                 //collison check
                 if (collision(pos.x, pos.y)) {
                     Player.playerSize++;
+                    Text.increaseScore(10);
                     // Food gets teleported out of sight when touched
                     pos.setLocation(1000, 1000);
                 }
