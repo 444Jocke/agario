@@ -5,13 +5,12 @@ public class Text{
     static int textY = 100;
 
     private static int score = 0;
-    private static final String text = "Move mouse to control player and get all the balls";
+    private static final String text = "Move mouse to control player and get all the balls!";
 
     public static void increaseScore(int points) {
 
         score += points;
     }
-
 
 
     //draws text on panel

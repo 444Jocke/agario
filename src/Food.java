@@ -1,43 +1,39 @@
 import java.awt.*;
 import java.util.Random;
 
-public class Food{
-
-
+public class Food {
     private static final Point[] foods;
 
     static {
-        // Generate random positions for the food items
+        foods = generateFoodPositions();
+    }
+
+    private static Point[] generateFoodPositions() {
         Random rand = new Random();
-        foods = new Point[40];
-        for (int i = 0; i < foods.length; i++) {
+        Point[] positions = new Point[4];
+        for (int i = 0; i < positions.length; i++) {
             int randomX = rand.nextInt(599);
             int randomY = rand.nextInt(599);
-            foods[i] = new Point(randomX, randomY);
+            positions[i] = new Point(randomX, randomY);
         }
+        return positions;
     }
-    //checks for collision
-    private static boolean collision(int foodX, int foodY) {
-        int playerRadius = 20;
+
+    private static boolean collision(int foodX, int foodY, Player player) {
+        int playerRadius = 25;
         int foodRadius = 5;
-        int area = (Player.x - foodX) * (Player.x - foodX) + (Player.y - foodY) * (Player.y - foodY);
+        int area = (player.getX() - foodX) * (player.getX() - foodX) + (player.getY() - foodY) * (player.getY() - foodY);
         int collisionArea = (playerRadius + foodRadius) * (playerRadius + foodRadius);
         return area <= collisionArea;
     }
-    //draws the food in the panel and handles collision
-    public static void Foods(Graphics2D g2) {
+
+    public void drawFoods(Graphics2D g2, Player player) {
         g2.setColor(Color.green);
         for (Point pos : foods) {
             if (pos != null) {
-                // Draw the food item on the screen
                 g2.fillOval(pos.x, pos.y, 10, 10);
-
-
-                //collison check
-                if (collision(pos.x, pos.y)) {
-                    Player.playerSize++;
-                    Text.increaseScore(10);
-                    // Food gets teleported out of sight when touched
+                if (collision(pos.x, pos.y, player)) {
+                    player.increasePlayerSize();
                     pos.setLocation(1000, 1000);
                 }
             }

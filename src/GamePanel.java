@@ -3,46 +3,44 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
-public class GamePanel extends JPanel implements Runnable{
-    Thread gameThread;
-    public static Point mouseLocation = new Point();
+public class GamePanel extends JPanel implements Runnable {
+    private Thread gameThread;
+    private final Player player;
+    private final Food food;
 
-    public GamePanel(){
+    public GamePanel() {
+        setPreferredSize(new Dimension(600, 600));
+        setBackground(Color.WHITE);
 
-        //setting panel properties
-        this.setPreferredSize(new Dimension(600, 600));
-        this.setBackground(Color.WHITE);
+        player = new Player();
+        food = new Food();
 
-        //gives the mlocation of the mouse to the mouseLocation
-        this.addMouseMotionListener(new MouseMotionAdapter() {
+        addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {
-                mouseLocation = e.getPoint();
+                player.setMouseLocation(e.getPoint());
             }
         });
     }
-    //starts the game thread and updates the graphics
+
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
     }
+
     @Override
     public void run() {
-
-        while(gameThread != null) {
+        while (gameThread != null) {
             repaint();
         }
     }
-    //creates the graphics on screen
-    public void paintComponent(Graphics g) {
+
+    @Override
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         Text.drawText(g2);
-        Player.playerBall(g2);
-        Food.Foods(g2);
+        player.drawPlayer(g2);
+        food.drawFoods(g2, player);
     }
-
-
-
-
 }

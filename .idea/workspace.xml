@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="Gjorde separata klasser för Player och Foods">
-      <change afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
+    <list default="true" id="7ed19924-1991-44e9-9a2b-f46d9312ea76" name="Changes" comment="la till score och tog bort extends">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Text.java" afterDir="false" />
     </list>
@@ -32,16 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,7 +61,15 @@
       <workItem from="1684181967051" duration="9254000" />
       <workItem from="1684319650181" duration="15000" />
       <workItem from="1684874653473" duration="669000" />
-      <workItem from="1684900967478" duration="3682000" />
+      <workItem from="1684900967478" duration="5914000" />
+      <workItem from="1684922722866" duration="1949000" />
+      <workItem from="1685390176602" duration="2639000" />
+      <workItem from="1685405644521" duration="5483000" />
+      <workItem from="1685433348721" duration="421000" />
+      <workItem from="1685433803707" duration="4317000" />
+      <workItem from="1685446196454" duration="172000" />
+      <workItem from="1685446399557" duration="3129000" />
+      <workItem from="1685468859229" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="agario">
       <created>1683384003777</created>
@@ -122,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684183756507</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="la till score och tog bort extends">
+      <created>1684906576611</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684906576611</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +167,11 @@
     <MESSAGE value="skapat food som spawnar i random platser" />
     <MESSAGE value="när spelaren nudder en food så försvinner den och la till text" />
     <MESSAGE value="Gjorde separata klasser för Player och Foods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gjorde separata klasser för Player och Foods" />
+    <MESSAGE value="la till score och tog bort extends" />
+    <option name="LAST_COMMIT_MESSAGE" value="la till score och tog bort extends" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

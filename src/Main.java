@@ -17,6 +17,7 @@ public class Main {
         frame.pack();
         //the window will be in the centre of the screen
         frame.setLocationRelativeTo(null);
+        System.out.println(Location.x + " " + Location.y);
 
         gamePanel.startGameThread();
 
